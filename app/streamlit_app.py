@@ -22,7 +22,7 @@ from sklearn.ensemble import RandomForestClassifier
 # ==============================
 st.set_page_config(page_title="Breast Cancer Diagnosis", layout="wide")
 
-DATA_PATH = "/breast_cancer.csv"
+DATA_PATH = "breast_cancer.csv"
 df_raw = pd.read_csv(DATA_PATH)
 
 # Clean columns if present
