@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 import warnings
 warnings.filterwarnings("ignore", message="X does not have valid feature names", category=UserWarning)
 
@@ -22,7 +23,8 @@ from sklearn.ensemble import RandomForestClassifier
 # ==============================
 st.set_page_config(page_title="Breast Cancer Diagnosis", layout="wide")
 
-DATA_PATH = "breast_cancer.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "breast_cancer.csv")
 df_raw = pd.read_csv(DATA_PATH)
 
 # Clean columns if present
